@@ -1,0 +1,106 @@
+<a href="https://speedychuck.com/home" style="color: #f00; font-size: 50px; text-decoration: none;">⬅Back</a>
+Cool little chit chatty thing using discord. Enjoy :D
+
+<widgetbot
+  server="1331673780929695989"
+  channel="1331673780929695992"
+  width="520"
+  height="600"
+></widgetbot>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+
+<form id="contactForm">
+    <textarea id="name" name="name" placeholder="Your Name here" rows="1" cols="25" required></textarea><br>
+    <textarea id="message" name="message" placeholder="Message here" rows="3" cols="40" required></textarea><br>
+    <button type="button" onclick="sendMessage()">Send</button>
+</form>
+
+<script>
+    function sendMessage() {
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+
+        // Check if the name or message is empty
+        if (name.trim() === "" || message.trim() === "") {
+            alert("Please fill in both the name and the message.");
+            return; // Stop execution if either field is empty
+        }
+
+        // Regular expression to detect various forms of URLs (including 'www.' and domains like 'example.com')
+        const urlPattern = /(?:https?:\/\/|www\.)[^\s]+|(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}/;
+
+        // Check if the name or message contains any URLs
+        if (urlPattern.test(name) || urlPattern.test(message)) {
+            alert("Links are not allowed in the name or message.");
+            return; // Stop execution if a link is found
+        }
+
+        // Get current date and time in the format YYYY-MM-DD HH:mm:ss
+        const now = new Date();
+        const timestamp = now.toISOString().replace('T', ' ').split('.')[0]; // This gives a format like "2025-01-22 14:30:00"
+
+        // Format the content to include Name, Message, and Timestamp
+        const content = `\`Name: ${name} | ${timestamp}\`\n**${message}**`;
+
+        const payload = {
+            content: content
+        };
+
+        // Send the data to the webhook if no links are found and both fields are filled
+        fetch('https://discord.com/api/webhooks/1331684857524387913/nFEItEwP4ZWFrZRb1AD0b_EF4lfqdYhAw1Hu74QJxFy5DPXgEADrFYe4uqBc5uDFG07B', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+    }
+</script>
+
+<style>
+    /* Set the background color to black for the whole page */
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        
+        /* Use flexbox to center everything */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full height of the viewport */
+        text-align: center;
+    }
+
+    /* Style the contact form */
+    form {
+        padding: 20px;
+        background-color: #333; /* Dark background for the form */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 100%;
+    }
+
+    /* Prevent resizing of textareas */
+    textarea {
+        resize: none;
+    }
+
+    /* Styling for the button */
+    button {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
