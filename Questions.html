@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            margin: 0;
-            padding: 20px;
-        }
+<style>
+    body {
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 20px;
+    }
 </style>
 <a href="https://speedychuck.com/home" style="color: #fff; font-size: 30px; text-decoration: none;">⬅Back</a>
 <br>
 <br><br>
-    <h1>Ask me a question.</h1>
-    <form id="contactForm">
-        <textarea id="message" name="message" placeholder="To type or not to type? That is the question." rows="4" cols="50" required></textarea><br>
-        <button type="button" onclick="sendMessage()">Ask</button>
-    </form>
-    <script>
-        function sendMessage() {
-            const message = document.getElementById('message').value;
-            const payload = {
-                content: message
-            };
+<h1>Ask me a question.</h1>
+<form id="contactForm">
+    <textarea id="message" name="message" placeholder="To type or not to type? That is the question." rows="4" cols="50"
+        required></textarea><br>
+    <button type="button" onclick="sendMessage()">Ask</button>
+</form>
+<script>
+    function sendMessage() {
+        const message = document.getElementById('message').value;
+        const payload = {
+            content: message
+        };
 
-            fetch('https://discord.com/api/webhooks/1268381115626950700/SHAKCy7o-qEgSSnLsVkyf8nWHp8kEDmcbl8afIn_OJ-sJOzAQWOCnVWSJN_NCDekf1_E', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            });
-        }
-    </script>
+        const wht = "NGE5RXQwNTdLRFFDX3NDM21wTEIxbmJYLS0tSVFuVUxFVEJNdUNZaVgzUlEybHMzdUQyTjdfc3JpU0wtblI4c01WWTI=";
+        const whId = "MTMzMTY2NjIwNzM0MTk0MDc3OA==";
+        const base = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3Mv";
+        // Decode the Base64 webhook URL
+        const URL = atob(base) + atob(whId) + "/" + atob(wht);
+
+        fetch(URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+    }
+</script>
 <br>
-<br><h1 style="color: #f00">Questions:</h1>
+<br>
+<h1 style="color: #f00">Questions:</h1>
 
 <!-- QUESTIONS-here-ok-alright-HERE -->
 
