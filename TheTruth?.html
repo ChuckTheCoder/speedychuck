@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<body bgcolor="black">
+</body>
+<body text="white">
+</body>
+<a href="https://speedychuck.com/home" style="color: #fff; font-size: 30px; text-decoration: none;">⬅Back</a>
+<html lang="en">
+<br><br>
+<h1>The Truth.</h1>
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById('mhm').value;
+            var correctPassword = 'IsThisThePassword?';
+            
+            if (enteredPassword.toLowerCase() === correctPassword.toLowerCase()) {
+
+                window.location.href = 'https://example.com'; 
+            } else {
+                
+                location.reload();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Enter the password:</h3>
+    <textarea id="mhm" rows="4" cols="50" placeholder="What is the password?"></textarea>
+    <br><br>
+    <button onclick="checkPassword()">Try</button>
+</body>
+</html>
 
