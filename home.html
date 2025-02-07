@@ -17,42 +17,42 @@
 
         /* Style for the image title */
         .header-title img {
-            width: 50%;  /* Use percentage to scale with screen */
-            max-width: 300px;  /* Limit max size of title image */
+            width: 70%;  /* Set width of title image to be much larger */
+            max-width: 600px;  /* Limit maximum size of title image */
             height: auto;
-            margin-bottom: 20px; /* Space between title image and buttons */
+            margin-bottom: 30px; /* Space between title image and buttons */
         }
 
         /* Style for buttons container */
         .button-container {
             display: flex;
-            gap: 15px;  /* Space between buttons */
+            gap: 20px;  /* Space between buttons */
             flex-wrap: wrap;  /* Allow buttons to wrap on smaller screens */
             justify-content: center; /* Center buttons horizontally */
         }
 
         /* Style for image buttons */
         .button-container img {
-            width: 15vw;  /* Scale button size based on viewport width */
-            max-width: 80px;  /* Limit max size of the buttons */
+            width: 12vw;  /* Scale button size based on viewport width */
+            max-width: 150px;  /* Limit max size of the buttons */
             height: auto;
             cursor: pointer;
         }
 
         /* Responsive design for smaller screens */
         @media (max-width: 600px) {
-            .button-container {
-                flex-direction: column;  /* Stack buttons vertically on small screens */
-                gap: 10px;  /* Reduce gap between buttons */
+            .header-title img {
+                width: 80%;  /* Slightly larger title on smaller screens */
             }
 
-            .header-title img {
-                width: 70%;  /* Increase logo size on smaller screens */
+            .button-container {
+                flex-direction: column;  /* Stack buttons vertically on small screens */
+                gap: 15px;  /* Reduce gap between buttons */
             }
 
             .button-container img {
-                width: 50vw;  /* Make buttons scale better on smaller screens */
-                max-width: 120px;  /* Increase max size of buttons */
+                width: 40vw;  /* Make buttons scale better on smaller screens */
+                max-width: 150px;  /* Increase max size of buttons on small screens */
             }
         }
     </style>
