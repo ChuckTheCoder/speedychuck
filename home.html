@@ -11,30 +11,30 @@
             flex-direction: column;  /* Stack title and buttons vertically */
             align-items: center;
             background-color: #4CAF50;
-            padding: 20px;
+            padding: 30px;  /* Increase padding for more space */
             box-sizing: border-box;
         }
 
         /* Style for the image title */
         .header-title img {
-            width: 90%;  /* Set width of title image to be much larger */
-            max-width: 1200px;  /* Limit maximum size of title image */
+            width: 95%;  /* Set width of title image to 95% of screen width */
+            max-width: 1500px;  /* Increase maximum size of title image */
             height: auto;
-            margin-bottom: 40px; /* Space between title image and buttons */
+            margin-bottom: 60px; /* Increase space between title image and buttons */
         }
 
         /* Style for buttons container */
         .button-container {
             display: flex;
-            gap: 30px;  /* Space between buttons */
+            gap: 50px;  /* Increase space between buttons */
             flex-wrap: wrap;  /* Allow buttons to wrap on smaller screens */
             justify-content: center; /* Center buttons horizontally */
         }
 
         /* Style for image buttons */
         .button-container img {
-            width: 12vw;  /* Scale button size based on viewport width */
-            max-width: 150px;  /* Limit max size of the buttons */
+            width: 20vw;  /* Increase button size to 20% of viewport width */
+            max-width: 250px;  /* Limit max size of the buttons */
             height: auto;
             cursor: pointer;
         }
@@ -42,17 +42,17 @@
         /* Responsive design for smaller screens */
         @media (max-width: 600px) {
             .header-title img {
-                width: 85%;  /* Slightly larger title on smaller screens */
+                width: 90%;  /* Slightly smaller title on small screens */
             }
 
             .button-container {
                 flex-direction: column;  /* Stack buttons vertically on small screens */
-                gap: 20px;  /* Increase gap between buttons */
+                gap: 30px;  /* Increase gap between buttons */
             }
 
             .button-container img {
-                width: 40vw;  /* Make buttons scale better on smaller screens */
-                max-width: 150px;  /* Increase max size of buttons on small screens */
+                width: 45vw;  /* Increase button size to 45% of viewport width */
+                max-width: 300px;  /* Increase max size of buttons on small screens */
             }
         }
     </style>
