@@ -12,11 +12,13 @@
             align-items: center;
             background-color: #4CAF50;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         /* Style for the image title */
         .header-title img {
-            width: 200px;  /* Set size of the title image */
+            width: 50%;  /* Use percentage to scale with screen */
+            max-width: 300px;  /* Limit max size of title image */
             height: auto;
             margin-bottom: 20px; /* Space between title image and buttons */
         }
@@ -24,24 +26,33 @@
         /* Style for buttons container */
         .button-container {
             display: flex;
-            gap: 10px;  /* Space between buttons */
+            gap: 15px;  /* Space between buttons */
+            flex-wrap: wrap;  /* Allow buttons to wrap on smaller screens */
+            justify-content: center; /* Center buttons horizontally */
         }
 
         /* Style for image buttons */
         .button-container img {
-            width: 50px;  /* Size of the image buttons */
-            height: 50px;
+            width: 15vw;  /* Scale button size based on viewport width */
+            max-width: 80px;  /* Limit max size of the buttons */
+            height: auto;
             cursor: pointer;
         }
 
         /* Responsive design for smaller screens */
         @media (max-width: 600px) {
-            .header-title img {
-                width: 150px;  /* Reduce title size on smaller screens */
+            .button-container {
+                flex-direction: column;  /* Stack buttons vertically on small screens */
+                gap: 10px;  /* Reduce gap between buttons */
             }
+
+            .header-title img {
+                width: 70%;  /* Increase logo size on smaller screens */
+            }
+
             .button-container img {
-                width: 40px;  /* Reduce button size on smaller screens */
-                height: 40px;
+                width: 50vw;  /* Make buttons scale better on smaller screens */
+                max-width: 120px;  /* Increase max size of buttons */
             }
         }
     </style>
