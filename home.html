@@ -1,53 +1,56 @@
-<!DOCTYPE>
-<a style="position: relative; top: 20px; left: 30px; color: #0f0; font-size: 25px; text-decoration: none;">hey I'm Chuck! This is my website</a><br><br><br>
-
-<a href="https://speedychuck.com/aboutme.html" style="position: relative; top: 20px; left: 400px; color: #f0a; font-size: 80px; text-decoration: none;">About Me</a><br>
-
-<a href="https://speedychuck.com/MySavedStuff" style="position: relative; top: 20px; left: 30px; color: red; font-size: 80px; text-decoration: none;">My stuff</a>
-<a href="https://speedychuck.com/MyCreations" style="position: relative; top: 100px; left: 0px; color: blue; font-size: 70px; text-decoration: none;">My Creations</a>
-<a href="https://speedychuck.com/Notebook" style="position: relative; top: 200px; left: -500px; color: #f0f; font-size: 60px; text-decoration: none;">My Notes</a>
-<a href="https://chuckthecoder.github.io/ChucksDump/" style="position: relative; top: 400px; left: -500px; color: #0ff; font-size: 60px; text-decoration: none;">My Dump</a>
- <style>
-        body {
-            background-color: black;
-            margin: 0; /* Optional: to remove default margin */
-            padding: 20px; /* Optional: to add some space around the content */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Image Title and Image Buttons</title>
+    <style>
+        /* Container for header and buttons (vertically stacked) */
+        .header-container {
+            display: flex;
+            flex-direction: column;  /* Stack title and buttons vertically */
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 20px;
         }
-</style>
-<a href="https://speedychuck.com/Questions" style="position: relative; top: 500px; left: -300px; color: #ff0; font-size: 60px; text-decoration: none;">Questions</a>
 
-<br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br>
-<a href='http://internetometer.com/give/50775'><img src='http://internetometer.com/image/50775.png'/></a><br>
-<a href="https://www.youtube.com/@overthinkD" target="_blank">
-        <img src="https://logolook.net/wp-content/uploads/2021/06/Symbol-Youtube.png" style="border: none; width: 80px; height: auto;">
-    </a>
- <a href="https://github.com/ChuckTheCoder" target="_blank">
-        <img src="https://th.bing.com/th/id/OIP.CsyjSJQYIy7G3TJQ9kAGXAHaHa?rs=1&pid=ImgDetMain" style="border: none; width: 50px; height: auto;">
-    </a>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<a style=" color: #0ff;">&nbsp☺︎<br>/▢\&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<-- This is bob<br>
-&nbsp♬</a>
+        /* Style for the image title */
+        .header-title img {
+            width: 200px;  /* Set size of the title image */
+            height: auto;
+            margin-bottom: 20px; /* Space between title image and buttons */
+        }
+
+        /* Style for buttons container */
+        .button-container {
+            display: flex;
+            gap: 10px;  /* Space between buttons */
+        }
+
+        /* Style for image buttons */
+        .button-container img {
+            width: 50px;  /* Size of the image buttons */
+            height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with image title and image buttons -->
+    <div class="header-container">
+        <div class="header-title">
+            <!-- Replace with your image URL for the title -->
+            <img src="logo.png" alt="Website Logo" title="My Website">
+        </div>
+        <div class="button-container">
+            <!-- Replace with your image URLs for the buttons -->
+            <img src="header.png" alt="Home" title="Home">
+            <img src="aboutme.png" alt="AboutMe" title="AboutMe">
+            <img src="news.png" alt="News" title="News">
+            <img src="questions.png" alt="Questions" title="Questions">
+        </div>
+    </div>
+
+</body>
+</html>
