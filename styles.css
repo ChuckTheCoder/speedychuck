@@ -1,0 +1,42 @@
+/* General styles for the header */
+.header-container {
+    text-align: center;
+    background-color: #4CAF50;
+    padding: 20px;
+}
+
+.header-title {
+    width: 80vw;
+    max-width: 1500px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.button-container img {
+    width: 20vw;
+    max-width: 250px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header-title {
+        width: 90%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .button-container img {
+        width: 45vw;
+        max-width: 300px;
+    }
+}
