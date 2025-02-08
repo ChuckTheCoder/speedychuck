@@ -3,79 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header with Image Title and Image Buttons</title>
-    <style>
-        /* Container for header and buttons (vertically stacked) */
-        .header-container {
-            display: flex;
-            flex-direction: column;  /* Stack title and buttons vertically */
-            align-items: center;
-            background-color: #4CAF50;
-            padding: 20px;  /* Reduced padding for a smaller header */
-            box-sizing: border-box;
-        }
-
-        /* Style for the image title */
-        .header-title img {
-            width: 80vw;  /* Set title image width to 80% of the viewport width */
-            max-width: 1500px;  /* Limit the maximum width of the title image */
-            height: auto;
-            margin-bottom: 30px; /* Reduced space between title image and buttons */
-            display: block;  /* Ensure it's treated as a block element */
-            margin-left: auto;
-            margin-right: auto;  /* Center the title image */
-            object-fit: contain;  /* Ensure image is contained and centered */
-            transform: translateX(-50px); /* Move the title 50px to the left */
-        }
-
-        /* Style for buttons container */
-        .button-container {
-            display: flex;
-            gap: 50px;  /* Increase space between buttons */
-            flex-wrap: wrap;  /* Allow buttons to wrap on smaller screens */
-            justify-content: center; /* Center buttons horizontally */
-        }
-
-        /* Style for image buttons */
-        .button-container img {
-            width: 20vw;  /* Increase button size to 20% of viewport width */
-            max-width: 250px;  /* Limit max size of the buttons */
-            height: auto;
-            cursor: pointer;
-        }
-
-        /* Responsive design for smaller screens */
-        @media (max-width: 600px) {
-            .header-title img {
-                width: 90%;  /* Slightly smaller title on small screens */
-            }
-
-            .button-container {
-                flex-direction: column;  /* Stack buttons vertically on small screens */
-                gap: 30px;  /* Increase gap between buttons */
-            }
-
-            .button-container img {
-                width: 45vw;  /* Increase button size to 45% of viewport width */
-                max-width: 300px;  /* Increase max size of buttons on small screens */
-            }
-        }
-    </style>
+    <title>Header</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet for styles -->
 </head>
 <body>
 
-    <!-- Header with image title and image buttons -->
     <div class="header-container">
-        <div class="header-title">
-            <!-- Replace with your image URL for the title -->
-            <img src="speedychucklogo2.png" alt="Website Header" title="SpeedyChuck">
-        </div>
+        <img class="header-title" src="speedychucklogo2.png" alt="Website Header">
         <div class="button-container">
-            <!-- Replace with your image URLs for the buttons -->
-            <img src="aboutme.png" alt="AboutMe" title="AboutMe">
-            <img src="news.png" alt="News" title="News">
-            <img src="questions.png" alt="Questions" title="Questions">
-            <img src="mystuff.png" alt="MyStuff" title="MyStuff">
+            <img src="aboutme.png" alt="AboutMe">
+            <img src="news.png" alt="News">
+            <img src="questions.png" alt="Questions">
+            <img src="mystuff.png" alt="MyStuff">
         </div>
     </div>
 
